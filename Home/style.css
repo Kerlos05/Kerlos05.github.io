@@ -1,0 +1,355 @@
+body{
+    background-color: var(--BACKGROUNDCOLOR);
+    color: var(--TEXTCOLOR);
+    height: 100vh;
+    display: grid ;
+    place-items: center center;
+    padding: 20px;
+}
+
+:root{
+    --BACKGROUNDCOLOR:rgb(14, 14, 14);
+    --TEXTCOLOR: rgba(240, 248, 255, 0.829); 
+    --POSITIONTEXT: 100px; 
+}
+        
+h1{
+    margin-bottom: 10px;
+}
+
+
+/* Text place */
+
+.text-container{
+    position: absolute;
+    top: var(--POSITIONTEXT); 
+    left: 40px; 
+    width: 400px;
+}
+
+.familiar_concepts{
+    width: 400px; 
+    position: absolute;
+    top: var(--POSITIONTEXT);
+    height: 170px;
+    right: calc(100px);
+    display: grid;
+}
+
+ul{
+    display: grid;
+    grid-template: repeat(2,50px) / repeat(2,140px);
+}
+
+
+li{
+    margin: 14px 0 5px 25px;
+    counter-increment: item;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+    background: #E9E4E0;
+    color: var(--BACKGROUNDCOLOR);
+    padding: 8px;
+    width: 100px;
+    position: relative;
+    z-index: 1022;
+    display: flex;    
+    align-items: center;
+    justify-content: flex-start;
+}
+
+li::before{
+    content: counter(item);
+    background-color: aqua;
+    padding:5px; 
+    position: absolute;
+    bottom: 0; 
+    right: 105px; 
+    width: 10px; 
+}
+
+
+li:hover::after{
+    position: absolute;
+    content: "";
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;
+}
+
+
+ul li:hover:after {
+    left: -.5em;
+    border-left-color: aqua;
+}
+      
+
+/* Skills*/
+
+.skill-container{
+    margin-top: 50px;
+    width: 800px;
+    display: grid;
+    padding: 20px; 
+    place-items: center center;
+    position: absolute;
+    top: 275px; 
+}
+
+.skill-container h1:first-child{
+    color: aliceblue;
+}
+
+
+.wrap-circles {
+    display: flex;
+    margin-top: 20px; 
+    flex-wrap: wrap;
+}
+
+.circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0.7rem;
+    border-radius: 50%;
+    background: #FFCDB2;
+    overflow: hidden;
+    box-shadow: 0 0 10px 8px rgb(74, 65, 65);
+}
+
+.circle.per-25 {
+    background-image: conic-gradient(#b3adae 25%, #000000 0);
+}
+.circle.per-50 {
+    background-image: conic-gradient(#b3adae  50%, #000000 0);
+}
+.circle.per-75 {
+    background-image: conic-gradient(#b3adae  60%, #000000 0);
+}
+.circle.per-100 {
+    background-image: conic-gradient(#b3adae  100%, #000000 0);
+}
+
+.circle.per-40{
+    background-image: conic-gradient(#b3adae  40%, #000000 0);
+
+}
+
+
+.circle .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 115px;
+    height: 115px;
+    background: #000;
+    border-radius: 50%;
+    font-size: 1.85em;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+.WebsiteNav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-brands{
+    transform: scale(180%);
+}
+
+.fa-brands:hover{
+    transform: scale(190%);
+}
+
+a{
+    margin: 25px;
+    color: aliceblue;
+}
+
+.WebsiteNav > img{
+    min-width: 170px; 
+    height: 235px; 
+    filter: contrast(1.5);
+    display: none;
+    border-radius: 20px;  
+}
+
+
+body.open .WebsiteNav img{
+    display: block;
+}
+
+.projects{
+    position: absolute;
+    bottom: -500px; 
+    background-color: #0000002d;
+    padding: 10px;
+    width:fit-content;
+    height: 400px; 
+    display: flex;
+}
+
+.project-container{
+    width: 260px; 
+    height: fit-content;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    display: grid;
+    place-content: center center;
+    margin: 5px;
+    transition: transform 100ms;
+    cursor: pointer;
+}
+
+.project-container  p{
+    margin-left: 20px; 
+    margin-top: 5px;
+    word-break: keep-all;
+}
+
+.project-container img {
+    width:250px; 
+    height: 120px;
+}
+
+
+.project-container:hover{
+    transform: scale(115%);
+    z-index: 100; 
+    box-shadow: 0 0 25px 1px gray;
+}
+
+/* Responsive */
+
+/* Phone */
+@media screen and (max-width: 479px){
+    h1{
+        font-size: 26px;
+    }
+
+    body{
+        font-size: 22px;
+        display: block;
+    }
+
+    .WebsiteNav > img{
+        display: none !important;
+    }
+    
+
+    .skill-container{
+        position: absolute;
+        top: 1000px; 
+    }
+
+    .projects{
+        display: grid;
+        gap: 40px;
+        grid-template: repeat(2, 620px) / repeat(2, 280px);
+        position: absolute;
+        bottom: -600px; 
+    }
+
+    body .text-container{
+        position: relative;
+        left:245px;  
+        top: 200px; 
+    }
+
+    body .familiar_concepts{
+        position: relative;
+        left:245px;  
+        top: 330px
+    }
+}
+
+
+/* Ipads */
+
+@media screen and (min-width: 540px) and (max-width: 1023px){
+    .projects{
+        display: grid;
+       gap: 20px;
+    }
+    .wrap-circles{
+        display: grid;
+        grid-template: repeat(1, 220px) / repeat(2, 200px);
+    }
+    .skill-container{
+        position: relative;
+        top: 570px; 
+    }
+
+    .familiar_concepts{
+        position: absolute;
+        left: calc(100% - 69%);
+        top:400px; 
+
+    }
+
+    .text-container{
+        position: absolute;
+        left: calc(100% - 69%);
+
+    }
+  
+}
+
+
+
+/* Sureface pro */
+@media screen and (min-width: 912px) and (min-height: 1358px){
+    .text-container{
+        position: absolute;
+        left: 315px; 
+    }
+
+    .familiar_concepts{
+        position: absolute;
+        left: 415px; 
+        left: 315px; 
+    }
+
+    .skill-container{
+        position: relative;
+        top: 300px; 
+    }
+
+}
+
+
+
+/* nest hub */
+@media screen and (min-width:1023px) and (max-height:600px){
+    .text-container{
+        position: absolute;
+        left: 370px; 
+        top: 30px; 
+    }
+
+    .familiar_concepts{
+        position: absolute;
+        left: 370px; 
+        top: 300px; 
+    }
+    .skill-container{
+        position: relative;
+        top: 500px; 
+    }
+  
+    .projects{
+        display: grid;
+        grid-template: repeat(2, 420px) / repeat(2, 280px);
+    }
+    
+}
