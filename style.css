@@ -60,7 +60,7 @@ header {
 
 
 body.on header{
-    background: linear-gradient(to left, #e6e3e3dd 5%, #25252500 80%) no-repeat fixed;
+    background: #25252500; 
 }
 
 .post-image{
