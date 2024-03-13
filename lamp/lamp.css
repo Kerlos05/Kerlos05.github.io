@@ -139,7 +139,7 @@ body.on .blub span:nth-child(3){
     appearance: none;
     -webkit-appearance: none;
         
-    background-image:url('../assets/night.png');
+    background-image:url('../assets/day.png');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 25px;
@@ -151,7 +151,7 @@ body.on .blub span:nth-child(3){
 }
 
 .switch:checked{
-background-image: url('../assets/day.png');
+background-image: url('../assets/night.png');
 background-size: cover;
 transition: background-image 1s ease-in-out;
 }
@@ -210,18 +210,18 @@ box-shadow: inset -5px -5px 4px rgba(53, 53, 53, 0.3);
 
 
 .switch:checked:before{
-content: '';
-width: 15px;
-height: 15px;
-border-radius: 50%;
-position: absolute;
-left: 15px;
-top: 5px;
-transform-origin: 53px 10px;
-background-color: transparent;
-box-shadow: 5px -1px 0px #fff;
-filter: blur(0px);
-animation: sun .7s forwards ease;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: -70px;
+    top: 5px;
+    transform-origin: 53px 10px;
+    background-color: transparent;
+    box-shadow: 5px -1px 0px #fff;
+    filter: blur(0px);
+    animation: moon .7s forwards ease;
 }
 @keyframes sun{
 0%{
@@ -257,22 +257,22 @@ animation: sun .7s forwards ease;
 
 
 .switch:before{
-content: '';
-width: 15px;
-height: 15px;
-border-radius: 50%;
-position: absolute;
-left: 15px;
-top: 5px;
-filter: blur(1px);
-background-color: #f5daaa;
-box-shadow: 0px 0px 10px #f5deb4,
-0px 0px 20px #f5deb4,
-0px 0px 30px #f5deb4,
-	inset 0px 0px 2px #efd3a3;
-	transform-origin: 53px 10px;
-	animation: moon .7s forwards ease;
-}
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    filter: blur(1px);
+    background-color: #f5daaa;
+    box-shadow: 0px 0px 10px #f5deb4,
+    0px 0px 20px #f5deb4,
+    0px 0px 30px #f5deb4,
+        inset 0px 0px 2px #efd3a3;
+        transform-origin: 53px 10px;
+        animation: sun .7s forwards ease;
+    }
 @keyframes moon{
 0%{
 	transform: rotate(0deg);
