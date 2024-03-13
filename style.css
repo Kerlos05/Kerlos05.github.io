@@ -1,0 +1,75 @@
+
+
+
+
+body {
+    min-width: fit-content;
+    overflow-x: hidden;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    color: #000 ;
+}
+
+
+
+body.on a, 
+body.on button{
+    color: white ;
+}
+
+body.on #feed div:hover{
+    background: #212529;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+
+#feed div:hover {
+    background: #f1f3f5;
+}
+
+.content {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+
+body.on header{
+    background: linear-gradient(to left, #e6e3e3dd 5%, #25252500 80%) no-repeat fixed;
+}
+
+.post-image{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.post-description{
+    word-break: break-all; 
+}

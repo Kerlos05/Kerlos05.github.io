@@ -1,0 +1,18 @@
+
+#world{
+  background: linear-gradient(#8ee4ae, #e9eba3);
+  max-width:800px;
+  height:300px;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-self: end;
+  z-index: -1;
+}
+
+
+#world canvas{
+  position: relative;
+  bottom: 75px;
+  right: 140px;
+}

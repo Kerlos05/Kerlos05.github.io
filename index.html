@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Simple portfolio">
+   <title>Kerlos Mansorati </title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   <link rel="stylesheet" href="./three.js/landingThree.css">
+   <link rel="stylesheet" href="./lamp/lamp.css">
+   <link rel="stylesheet" href="./timeline/timeline.css">
+   <link rel="stylesheet" href="./flying-lamb/flying-lamb.css">
+   <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="./assets/wolf.jpg">
+</head>
+<body class="text-center">
+   <div class="world">
+      <header class="d-flex justify-content-between p-2 mb-1">
+         <div class="btn">
+            <img src="./assets/wolf.jpg" alt="wolf" width="48px" class="rounded-3">
+         </div>
+         <div class="light">
+            <div class="blub">
+               <div class="wire"></div>
+               <span></span>
+               <span></span>
+            </div>
+         </div> 
+         <div class="wrapper">
+            <input type="checkbox" name="checkbox" class="switch">
+         </div>
+      </header>
+      
+      <main class="main-container container">
+         <div class="d-flex justify-content-center align-items-start">
+            <div id="world"></div>
+         </div>
+
+         <div class="d-flex justify-content-center"  style="transform: translateY(-80px);">
+            <div class="d-flex justify-content-start flex-column" style="width: 600px;">
+               <div class="d-flex justify-content-between align-items-end w-100" >
+                  <img src="./assets/wolf.jpg" alt="wolf" class="rounded-pill border border-primary border-5" loading="eager" width="150px" height="150px">
+                  <a 
+                     style="width: 100px; height: 40px; background-color: #CC0088; color: aliceblue;" 
+                     class="d-flex btn align-items-center justify-content-between rounded-pill p-3"
+                     href="https://github.com/kerlos05"
+                     target="_blank"
+                  >
+                     <span>Visit</span> 
+                     <i class="fa-brands fa-github " style="transform: scale(1.5); "></i>
+                  </a>
+               </div>
+
+               <div class="mt-3 text-start p-1">
+                  <h1 >Kerlos Mansorati</h1>
+                  <p style="font-size: 18px;" class="mt-2 mb-2">Where design meets code! ✨</p>
+                  <p>Full Stack Software Engineer. Creative Innovator. Rapid Learner. Dynamic Problem-Solver. </p>
+
+                   <!-- We should have something here  -->
+
+                  <div class="w-100 d-flex gap-5 justify-content-between mb-3 mt-3">
+                     <button onclick="navigate('feed')" class="btn">Feed</button>
+                     <button onclick="navigate('about')" class="btn">About</button>
+                     <button onclick="navigate('connect')" class="btn">Connect</button>
+                  </div>
+
+                  <!-- Feed -->
+                  <div id="feed" class="content active " >
+                     
+                     <div class="p-4 mb-4 d-flex" style="min-height: 400px;">
+                        <img src="assets/wolf.jpg" alt="wolf" width="50" height="50" class="rounded-pill">
+                        <div class="ms-2 d-grid gap-2">
+                           <div class="d-flex align-items-center gap-3">
+                              <a href="#"><h5 class="mb-0">Kerlos 🎆</h5></a>
+                              <p>• <time>20 Jan 2023</time></p>
+                           </div>
+                           <div class="py-1 px-3 d-flex align-items-center gap-1  rounded-pill" style="background: gray; width: fit-content;height:35px">
+                              <span role="img" alt="Status icon" aria-hidden="true">✅</span>
+                              <span class="text-fluid--2 font-bold">D.O.N.E</span>
+                           </div>
+                           <div class="p-2">
+                              <h3>Chap app</h1>
+                              <p class="post-description">
+                                 Discover our amazing MERN chat app! It's super secure with encryption and lets you chat instantly with Socket.io. 
+                                 Easily find friends with our search feature, and keep it safe with JWT. Plus, you can join groups, 
+                                 and personalize your profile by changing your username and avatar whenever you like 
+                              </p>
+                              <br />
+                              <img src="./assets/projects/mern-chat.jpg" alt="Mern chats" class="post-image">
+                              <div class="row   ">
+                                 <div class="d-flex align-items-center justify-content-end">
+                                    <i class="fas fa-heart me-1"></i>
+                                    <span>200k </span>
+                                 </div>
+                             </div> 
+                           </div>
+                        </div>
+                     </div>
+                   
+                     <div class="p-4 mb-4 d-flex" style="min-height: 400px;">
+                        <img src="assets/wolf.jpg" alt="wolf" width="50" height="50" class="rounded-pill">
+                        <div class="ms-2 d-grid gap-2">
+                           <div class="d-flex align-items-center gap-3">
+                              <a href="#"><h5 class="mb-0">Kerlos 🎉</h5></a>
+                              <p>• <time>20 Jan 2023</time></p>
+                           </div>
+                           <div class="py-1 px-3 d-flex align-items-center gap-1 rounded-pill" style="background: gray; width: fit-content;height:35px">
+                              <span role="img" alt="Status icon" aria-hidden="true">✔️</span>
+                              <span class="text-fluid--2 font-bold">Completed</span>
+                          </div>
+                           <div class="p-2">
+                              <h3>Social media app</h1>
+                              <p class="post-description">
+                                 Welcome to our dynamic social hub! Share your thoughts and moments effortlessly, engaging with comments. 
+                                 Connect with friends via private messaging. Customize your profile settings to reflect your unique identity. 
+                                 Join us and embrace the future of social networking, where every interaction fosters connection.
+                              <br />
+                              <img src="./assets/projects/Social-media-app.jpg" alt="Mern chats" class="post-image">
+                              <div class="row   ">
+                                 <div class="d-flex align-items-center justify-content-end">
+                                    <i class="fas fa-heart me-1"></i>
+                                    <span>2k</span>
+                                 </div>
+                             </div> 
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="p-4 mb-4 d-flex" style="min-height: 400px;">
+                        <img src="assets/wolf.jpg" alt="wolf" width="50" height="50" class="rounded-pill">
+                        <div class="ms-2 d-grid gap-2">
+                           <div class="d-flex align-items-center gap-3">
+                              <a href="#"><h5 class="mb-0">Kerlos 🌟</h5></a>
+                              <p>• <time>20 Jan 2023</time></p>
+                           </div>
+                           <div class="py-1 px-3 d-flex align-items-center gap-1 rounded-pill" style="background: gray; width: fit-content;height:35px">
+                              <span role="img" alt="Status icon" aria-hidden="true">🤔</span>
+                              <span class="text-fluid--2 font-bold">As usual</span>
+                          </div>
+                           <div class="p-2">
+                              <h3>Weather app</h1>
+                              <p class="post-description">
+                                 I decided to join the trend of creating a weather application, but I approached it in my own unique way. 
+                                 It turned out to be the best weather application I've ever created.
+                              <br />
+                              <img src="./assets/projects/Weather.png" alt="Mern chats" class="post-image">
+                              <div class="row   ">
+                                 <div class="d-flex align-items-center justify-content-end">
+                                    <i class="fas fa-heart me-1"></i>
+                                    <span>998 likes</span>
+                                 </div>
+                             </div> 
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div id="about" class="content ">
+                    <div class="about">
+                     <div class="timeline">
+                        <ul>
+                          <li>
+                            <div class="right_content">
+                              <p>This date marks the beginning of my journey as a C++ developer</p>
+                            </div>
+                            <div class="left_content">
+                              <h3>2020</h3>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="right_content">
+                              <p>After a few years have passed, I have created several projects, 
+                                 among them my proudest achievement, which is a blockchain-like system
+                              </p>
+                            </div>
+                            <div class="left_content">
+                              <h3>2022</h3>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="right_content">
+                              <p>
+                                 On this date, I embarked on my journey as a full-stack software engineer
+                              </p>
+                            </div>
+                            <div class="left_content">
+                              <h3>2023</h3>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="right_content">
+                              <p>
+                                 After years of dedication, I landed my first internship as full-stack developer!
+                              </p>
+                            </div>
+                            <div class="left_content">
+                              <h3>2023-07</h3>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="right_content">
+                              <p>
+                                 During this period, I developed a booking system and gained experience with payment systems, among other incredible projects
+                              </p>
+                            </div>
+                            <div class="left_content">
+                              <h3>2023-12</h3>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="right_content">
+                              <p>
+                                 I am currently actively involved in multiple projects, each designed to sharpen my skills and deepen my understanding of software development.
+                              </p>
+                            </div>
+                            <div class="left_content">
+                              <h3>2024-03</h3>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="right_content">
+                              <p>
+                                 By the end of this year, I aim to secure a job 😙
+                              </p>
+                            </div>
+                            <div class="left_content">
+                              <h3>2025</h3>
+                            </div>
+                          </li>
+                          <div style="clear:both;"></div>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                 
+                  <div id="connect" class="content ">
+                     <div class="d-flex justify-content-center gap-4 mt-3 p-3">
+                        <button class="btn fa-brands fa-github " style="transform: scale(2);"></button>
+                        <button class="btn fa-brands fa-linkedin " style="transform: scale(2);"></button>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </main>
+   </div>
+   
+   <canvas id="reveal-effect"></canvas>
+
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+   <script src="./lamp/lamp.js"></script>
+   <script src="./timeline/timeline.js"></script>
+   
+   <script src="./three.js/landingThree.js"></script> 
+   
+   <script src="./flying-lamb/flying-lamb.js"></script>
+
+   <script>
+      function navigate(section) {
+         var i, content;
+         content = document.getElementsByClassName("content");
+         for (i = 0; i < content.length; i++) {
+            content[i].style.display = "none";
+         }
+         document.getElementById(section).style.display = "block";
+      }
+
+      function handleDisplay() {
+         const width = window.outerWidth;
+         const displayStyle = width <= 900 ? "flex" : "none";
+         const reverseDisplayStyle = width > 900 ? "flex" : "none";
+
+         document.getElementsByClassName('light')[0].style.display = reverseDisplayStyle;
+         document.getElementsByClassName('wrapper')[0].style.display = displayStyle;
+      }
+
+      window.addEventListener("resize", handleDisplay);
+      window.addEventListener("load", handleDisplay);
+
+   </script>
+
+ </body>
+</html>
